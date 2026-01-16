@@ -1,0 +1,32 @@
+{% comment %}
+  Cart Drawer Snippet
+  This file should only contain cart drawer markup, not product sections.
+  The duplicate product section has been removed to fix the duplicate element issue.
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ 'component-cart-drawer.css' | asset_url }}" media="all">
+
+<cart-drawer id="CartDrawer" class="drawer drawer--right">
+  <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
+  <div class="drawer__inner">
+    <div class="drawer__header">
+      <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+      <cart-drawer-close class="drawer__close">
+        <button type="button" aria-label="{{ 'accessibility.close' | t }}">
+          {% render 'icon-close' %}
+        </button>
+      </cart-drawer-close>
+    </div>
+    <div class="drawer__contents">
+      <div class="drawer__inner-empty">
+        <div class="cart__empty-text">{{ 'sections.cart.empty' | t }}</div>
+      </div>
+      <div id="CartDrawer-CartItems" class="cart-drawer__items"></div>
+      <div class="drawer__footer">
+        <div id="CartDrawer-CartNote"></div>
+        <div id="CartDrawer-CartTotal"></div>
+        <div id="CartDrawer-Checkout"></div>
+      </div>
+    </div>
+  </div>
+</cart-drawer>
