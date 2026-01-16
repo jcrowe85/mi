@@ -15,6 +15,7 @@
         "slideshow_item_dLCazz": {
           "type": "slideshow_item",
           "settings": {
+            "image": "shopify://shop_images/pink_bg_hero_3_1.png",
             "color_scheme": "background-3",
             "caption": "",
             "bg_color": "#812221",
@@ -60,7 +61,6 @@
           "type": "product",
           "settings": {
             "product": "bloom-hair-scalp-serum-longform",
-            "static_image": "shopify://shop_images/Serum-turntable-v2-RGBA.png",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -73,7 +73,6 @@
           "type": "product",
           "settings": {
             "product": "bloom-peptide-hair-serum-3-bottle",
-            "static_image": "shopify://shop_images/Serum-turntable-v2-RGBA.png",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -86,7 +85,6 @@
           "type": "product",
           "settings": {
             "product": "micro-roller",
-            "static_image": "shopify://shop_images/Stamp-turntable-v1-RGBA.png",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -99,7 +97,6 @@
           "type": "product",
           "settings": {
             "product": "detangling-comb",
-            "static_image": "shopify://shop_images/Comb-turntable-v1-RGBA_1.png",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -149,9 +146,7 @@
           "settings": {
             "badge": "Goal",
             "title": "month-by-month progress",
-            "text": "<ul><li>Peptide-rich serum starts nourishing the scalp and roots.</li><li>Follicles become stronger so new growth can stay longer.</li><li>Creates a foundation for thicker, fuller, more resilient hair.</li></ul>",
-            "image": "shopify://shop_images/Mask_group_5_288525f6-5db4-4be1-86fd-e9c9b1cf5c6e.png",
-            "image2": "shopify://shop_images/Group_1463.png"
+            "text": "<ul><li>Peptide-rich serum starts nourishing the scalp and roots.</li><li>Follicles become stronger so new growth can stay longer.</li><li>Creates a foundation for thicker, fuller, more resilient hair.</li></ul>"
           }
         },
         "step_caMD6p": {
@@ -159,9 +154,7 @@
           "settings": {
             "badge": "Month 1",
             "title": "scalp detox & growth prep",
-            "text": "<ul><li>Shedding begins to ease as follicles get more support.</li><li>Scalp feels calmer, less itchy, more comfortably balanced overall.</li><li>Repair quietly begins beneath the surface of your scalp.</li></ul>",
-            "image": "shopify://shop_images/Mask_group_5_288525f6-5db4-4be1-86fd-e9c9b1cf5c6e.png",
-            "image2": "shopify://shop_images/Group_1463.png"
+            "text": "<ul><li>Shedding begins to ease as follicles get more support.</li><li>Scalp feels calmer, less itchy, more comfortably balanced overall.</li><li>Repair quietly begins beneath the surface of your scalp.</li></ul>"
           }
         },
         "step_cCRVT4": {
@@ -169,9 +162,7 @@
           "settings": {
             "badge": "month 2",
             "title": "obviously sign of baby hairs",
-            "text": "<ul><li>New baby hairs start appearing along temples and part.</li><li>Shedding continues to decline, strands stay put for longer.</li><li>Texture begins improving; hair feels denser and more substantial.</li></ul>",
-            "image": "shopify://shop_images/Mask_group_5_288525f6-5db4-4be1-86fd-e9c9b1cf5c6e.png",
-            "image2": "shopify://shop_images/Group_1463.png"
+            "text": "<ul><li>New baby hairs start appearing along temples and part.</li><li>Shedding continues to decline, strands stay put for longer.</li><li>Texture begins improving; hair feels denser and more substantial.</li></ul>"
           }
         },
         "step_L6JqjL": {
@@ -179,9 +170,7 @@
           "settings": {
             "badge": "month 3",
             "title": "hair is thicker, longer, healthier",
-            "text": "<ul><li>Volume and density become noticeably higher across the scalp.</li><li>Hairline looks fuller, especially around temples and part.</li><li>Hair feels stronger, styling easier, confidence naturally follows.</li></ul>",
-            "image": "shopify://shop_images/Mask_group_5_288525f6-5db4-4be1-86fd-e9c9b1cf5c6e.png",
-            "image2": "shopify://shop_images/Group_1463.png"
+            "text": "<ul><li>Volume and density become noticeably higher across the scalp.</li><li>Hairline looks fuller, especially around temples and part.</li><li>Hair feels stronger, styling easier, confidence naturally follows.</li></ul>"
           }
         }
       },
@@ -214,10 +203,6 @@
         "button_link": "shopify://products/bloom-hair-scalp-serum-longform",
         "button_bg_color": "#3b0c00",
         "button_text_color": "#ffffff",
-        "main_product_image": "shopify://shop_images/Frame_1739333908_2_copy.png",
-        "sub_image_1": "shopify://shop_images/Screenshot_2025-11-19_at_8.48.12_PM.png",
-        "sub_image_2": "shopify://shop_images/Screenshot_2025-11-19_at_8.54.22_PM.png",
-        "sub_image_3": "shopify://shop_images/Screenshot_2025-11-19_at_8.40.33_PM.png",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent",
         "padding_top": "m",
@@ -229,7 +214,6 @@
       "name": "Video Feature Tech",
       "settings": {
         "color_scheme": "background-4",
-        "bg_image": "shopify://shop_images/Rendering_-_hair_exploration_wave-still_v001_1_60665bd6-eefa-429d-bd53-b0bea9e65ec7.png",
         "caption_text": "● Bioactive  Peptide  Technology",
         "caption_color": "#ffffff",
         "main_title": "most hair serums sit on the surface—Fleur signals at the root.",
@@ -310,16 +294,12 @@
       "blocks": {
         "circular_image_kCraeX": {
           "type": "circular_image",
-          "settings": {
-            "image": "shopify://shop_images/circle_860px.png"
-          }
+          "settings": {}
         },
         "simple_image_qfgmK4": {
           "type": "simple_image",
           "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/Screenshot_2025-11-20_at_9.50.41_AM_1.png"
-          }
+          "settings": {}
         },
         "video_embed_mTBUht": {
           "type": "video_embed",
@@ -331,10 +311,7 @@
         },
         "quote_with_image_zfVmCT": {
           "type": "quote_with_image",
-          "settings": {
-            "image": "shopify://shop_images/Frame_1739333318_copy_145cafd9-fe24-436a-a783-323584b32217.png",
-            "image1": "shopify://shop_images/Group_1477_new.png"
-          }
+          "settings": {}
         },
         "video_embed_h6A6fK": {
           "type": "video_embed",
@@ -342,16 +319,11 @@
         },
         "simple_image_Kby48K": {
           "type": "simple_image",
-          "settings": {
-            "image": "shopify://shop_images/hair_comb.png"
-          }
+          "settings": {}
         },
         "quote_with_image_aftHqc": {
           "type": "quote_with_image",
-          "settings": {
-            "image": "shopify://shop_images/ugc-8_copy.png",
-            "image1": "shopify://shop_images/Group_1498.png"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -415,7 +387,6 @@
         "block_XnaRXn": {
           "type": "block",
           "settings": {
-            "bg_image": "shopify://shop_images/Screenshot_2025-11-20_at_1.13.47_PM.png",
             "text": "menopause hair loss",
             "subtext": "",
             "texttt": "boost growth despite hormones",
@@ -426,7 +397,6 @@
         "block_rWDbxt": {
           "type": "block",
           "settings": {
-            "bg_image": "shopify://shop_images/Screenshot_2025-11-20_at_1.30.03_PM.png",
             "text": "",
             "subtext": "start your journey today",
             "texttt": "results in as little as 6 weeks",
