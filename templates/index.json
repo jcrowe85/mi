@@ -1,47 +1,47 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slideshow_item_dLCazz": {
-          "type": "slideshow_item",
-          "settings": {
-            "video": "shopify://files/videos/hero option 4.mp4",
-            "color_scheme": "background-3",
-            "caption": "",
-            "bg_color": "#812221",
-            "text_color": "#ffffff",
-            "heading": "Topical Peptide Serum for Hair Growth",
-            "text": "<p>A powerful blend of peptides that supports scalp health for thicker, fuller, stronger hair.</p>",
-            "button_label": "Shop Now",
-            "button_link": "shopify://products/bloom-hair-scalp-serum-longform",
-            "button_style": "secondary",
-            "button_arrow": true,
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": ["slideshow_item_dLCazz"],
-      "custom_css": [],
-      "settings": {
-        "color_scheme_main_wrapper": "background-3",
-        "section_layout": "full",
-        "section_alignment": "left",
-        "vertical_alignment": "flex-end",
-        "text_animation": true,
-        "image_size": "large",
-        "is_autoplay": true,
-        "is_hover_stop_autoplay": true,
-        "show_bullets": true,
-        "parallax": false,
-        "slideshow_speed": 1.1,
-        "slideshow_delay": 3,
-        "slide_effects": "slide",
-        "additional_text": "<p>Scroll</p>",
-        "enable_additional_text": true,
-        "margin_top": "no-indent",
-        "margin_bottom": "no-indent"
-      }
+    // "slideshow": {
+    //   "type": "slideshow",
+    //   "blocks": {
+    //     "slideshow_item_dLCazz": {
+    //       "type": "slideshow_item",
+    //       "settings": {
+    //         "video": "shopify://files/videos/hero option 4.mp4",
+    //         "color_scheme": "background-3",
+    //         "caption": "",
+    //         "bg_color": "#812221",
+    //         "text_color": "#ffffff",
+    //         "heading": "Topical Peptide Serum for Hair Growth",
+    //         "text": "<p>A powerful blend of peptides that supports scalp health for thicker, fuller, stronger hair.</p>",
+    //         "button_label": "Shop Now",
+    //         "button_link": "shopify://products/bloom-hair-scalp-serum-longform",
+    //         "button_style": "secondary",
+    //         "button_arrow": true,
+    //         "overlay_opacity": 0
+    //       }
+    //     }
+    //   },
+    //   "block_order": ["slideshow_item_dLCazz"],
+    //   "custom_css": [],
+    //   "settings": {
+    //     "color_scheme_main_wrapper": "background-3",
+    //     "section_layout": "full",
+    //     "section_alignment": "left",
+    //     "vertical_alignment": "flex-end",
+    //     "text_animation": true,
+    //     "image_size": "large",
+    //     "is_autoplay": true,
+    //     "is_hover_stop_autoplay": true,
+    //     "show_bullets": true,
+    //     "parallax": false,
+    //     "slideshow_speed": 1.1,
+    //     "slideshow_delay": 3,
+    //     "slide_effects": "slide",
+    //     "additional_text": "<p>Scroll</p>",
+    //     "enable_additional_text": true,
+    //     "margin_top": "no-indent",
+    //     "margin_bottom": "no-indent"
+    //   }
     },
     // "products_grid_BLrRWT": {
     //   "type": "products-grid",
