@@ -2,11 +2,12 @@
   "sections": {
     "slideshow": {
       "type": "slideshow",
+      "disabled": true,
       "blocks": {
         "slideshow_item_dLCazz": {
           "type": "slideshow_item",
           "settings": {
-            "video": "shopify://files/videos/hero option 4.mp4",
+            "video": "",
             "color_scheme": "background-3",
             "caption": "",
             "bg_color": "#812221",
@@ -134,6 +135,7 @@
     },
     "feature_essentials_3p9rKE": {
       "type": "feature-essentials",
+      "disabled": true,
       "name": "Feature Essentials",
       "settings": {
         "color_scheme": "background-2",
@@ -146,10 +148,10 @@
         "button_link": "",
         "button_bg_color": "#3b0c00",
         "button_text_color": "#ffffff",
-        "main_product_image": "shopify://shop_images/Frame_1739333908_2_copy.png",
-        "sub_image_1": "shopify://shop_images/Screenshot_2025-11-19_at_8.48.12_PM.png",
-        "sub_image_2": "shopify://shop_images/Screenshot_2025-11-19_at_8.54.22_PM.png",
-        "sub_image_3": "shopify://shop_images/Screenshot_2025-11-19_at_8.40.33_PM.png",
+        "main_product_image": "",
+        "sub_image_1": "",
+        "sub_image_2": "",
+        "sub_image_3": "",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent",
         "padding_top": "m",
@@ -158,10 +160,11 @@
     },
     "video_feature_tech_fMTwPd": {
       "type": "video-feature-tech",
+      "disabled": true,
       "name": "Video Feature Tech",
       "settings": {
         "color_scheme": "background-4",
-        "bg_image": "shopify://shop_images/Rendering_-_hair_exploration_wave-still_v001_1_60665bd6-eefa-429d-bd53-b0bea9e65ec7.png",
+        "bg_image": "",
         "caption_text": "● Bioactive  Peptide  Technology",
         "caption_color": "#ffffff",
         "main_title": "most hair serums sit on the surface—Fleur signals at the root.",
@@ -184,10 +187,11 @@
     },
     "image_with_text_UU7Eae": {
       "type": "image-text-second",
+      "disabled": true,
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "color_scheme": "",
-        "video": "shopify://files/videos/z_Upload-Image---Internal-Only-Style-bf0549d3.MOV",
+        "video": "",
         "image_size": "adapt",
         "layout": "text_first",
         "icon_size": "medium",
@@ -240,6 +244,7 @@
     },
     "stories_carousel_XtL6mQ": {
       "type": "stories-carousel",
+      "disabled": true,
       "blocks": {
         "circular_image_kCraeX": {
           "type": "circular_image",
@@ -350,6 +355,7 @@
     },
     "custom_info_blocks_zp4q9p": {
       "type": "custom-info-blocks",
+      "disabled": true,
       "blocks": {
         "block_XnaRXn": {
           "type": "block",
@@ -370,7 +376,7 @@
             "subtext": "start your journey today",
             "texttt": "results in as little as 6 weeks",
             "button": "Shop Now",
-            "button_link": "shopify://products/bloom-hair-scalp-serum-longform"
+            "button_link": ""
           }
         }
       },
