@@ -118,7 +118,7 @@
 }
 .slideshow span.caption { margin-bottom: 20px; letter-spacing: 0; font-size: 12px; padding: 2px 8px; border-radius: 16px; font-weight: 600; display: inline-block; }
 
-.slideshow img, .slideshow video, .slideshow-slide__img.have-overlay, .slideshow-swiper__slide.swiper-slide .have-overlay:before, .slideshow-slide { border-radius: 0 0 30px 30px; overflow: hidden; }
+.slideshow img, .slideshow video, .slideshow-slide__img.have-overlay, .slideshow-swiper__slide.swiper-slide .have-overlay:before, .slideshow-slide { border-radius: 0 0 0px 0px; overflow: hidden; }
 .no-border-radius,
 .no-border-radius img,
 .no-border-radius video,
