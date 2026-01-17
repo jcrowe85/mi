@@ -61,6 +61,7 @@
           "type": "product",
           "settings": {
             "product": "bloom-hair-scalp-serum-longform",
+            "card_bg": "#93c0f0",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -73,6 +74,7 @@
           "type": "product",
           "settings": {
             "product": "bloom-peptide-hair-serum-3-bottle",
+            "card_bg": "#ffffff",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -85,6 +87,7 @@
           "type": "product",
           "settings": {
             "product": "micro-roller",
+            "card_bg": "#ffffff",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -97,6 +100,7 @@
           "type": "product",
           "settings": {
             "product": "detangling-comb",
+            "card_bg": "#ffffff",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
