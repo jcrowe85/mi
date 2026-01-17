@@ -101,10 +101,10 @@
       "background-3": {
         "settings": {
           "colors_text": "#fcfcf7",
-          "colors_secondary_text": "#e9e3df",
+          "colors_secondary_text": "#ffffff",
           "colors_text_title": "#ffffff",
           "colors_background_1": "#fd8ca5",
-          "colors_background_2": "#f4f4f4",
+          "colors_background_2": "#ffffff",
           "background_gradient": "",
           "colors_primary_button_labels": "#ffffff",
           "colors_primary_button_labels_hover": "#fd8ca5",
