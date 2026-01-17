@@ -87,7 +87,7 @@
           "type": "product",
           "settings": {
             "product": "micro-roller",
-            "card_bg": "#ffffff",
+            "card_bg": "#fd8ca5",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -98,6 +98,7 @@
         },
         "product_p8bzne": {
           "type": "product",
+          "disabled": true,
           "settings": {
             "product": "detangling-comb",
             "card_bg": "#ffffff",
