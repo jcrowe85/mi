@@ -188,7 +188,7 @@
 
                 <li
                   class="collection-product-card"
-                  style="{% if block.settings.card_bg != blank %}--card-bg: {{ block.settings.card_bg }}; --card-bg: {{ block.settings.card_bg }};{% endif %}"
+                  style="{% if block.settings.card_bg != blank %}--card-bg: {{ block.settings.card_bg }}; {% endif %}"
                   {{ block.shopify_attributes }}
                   data-hevc-desktop="{{ block.settings.hover_video_hevc_desktop | escape }}"
                   data-hevc-mobile="{{ block.settings.hover_video_hevc_mobile | escape }}"
