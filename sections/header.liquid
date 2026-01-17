@@ -437,50 +437,92 @@
 							</header-drawer>
 						{%- endif -%}
 						<div class="logo-menu-custom-wrap">
-						<div class="header-top__logo">
-							
-								<h1 class="header__heading">
-									
-									<style>
-										:root {
-											--header-logo-width: {{ section.settings.logo_width }}px;
-										}
-									</style>
-									<a href="{{ routes.root_url }}" class="header__heading-link focus-inset">
-										{%- if section.settings.logo != blank -%}
-											{%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
-											{%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-											{%- assign image_size_2x = section.settings.logo_width | times: 2 -%}
-											{% capture srcset %}
-												{{ section.settings.logo | image_url: width: section.settings.logo_width }}, {{ section.settings.logo | image_url: width: image_size_2x }} 2x
-											{% endcapture %}
+<div class="header-top__logo">
+  <h1 class="header__heading">
 
+    <style>
+      :root {
+        --header-logo-width: {{ section.settings.logo_width }}px;
+      }
+    </style>
 
-                                            {% if template.name == 'index' or template == 'page.company' or template == 'page.science' or template == 'blog' or template == 'article'%}
-                                                <img src="https://cdn.shopify.com/s/files/1/0984/4031/5194/files/logo_white.png?v=1768645289" />
-                                            {% else %}
-                                                <img src="https://cdn.shopify.com/s/files/1/0984/4031/5194/files/logo_white.png?v=1768645289" />  
-                                            {% endif %}                                      
-										
-											
-											{% comment %} {%- if section.settings.logo_2 != blank -%}
-												{% capture srcset %}
-													{{ section.settings.logo_2 | image_url: width: section.settings.logo_width }}, {{ section.settings.logo_2 | image_url: width: image_size_2x }} 2x
-												{% endcapture %}
-												{{ section.settings.logo_2 | image_url: width: section.settings.logo_width | image_tag:
-													class: 'header__heading-logo header__heading-logo--overlay',
-													srcset: srcset,
-													height: logo_height,
-													width: section.settings.logo_width,
-													alt: logo_alt
-												}}
-											{%- endif -%} {% endcomment %}
-										{%- else -%}
-											{% comment %} <span class="h6" style="max-width:{{ section.settings.logo_width }}px">{{ shop.name }}</span> {% endcomment %}
-										{%- endif -%}
-									</a>
-								</h1>
-						</div>
+    <a href="{{ routes.root_url }}" class="header__heading-link focus-inset">
+
+      {%- if section.settings.logo != blank or section.settings.logo_2 != blank -%}
+
+        {%- assign use_white_logo = false -%}
+
+        {%- comment -%}
+          WHITE logo pages:
+          - index (home)
+          - blog
+          - article
+          - page.company
+          - page.science
+        {%- endcomment -%}
+
+        {%- if request.page_type == 'index'
+          or request.page_type == 'blog'
+          or request.page_type == 'article'
+        -%}
+          {%- assign use_white_logo = true -%}
+        {%- endif -%}
+
+        {%- if request.page_type == 'page' and template.suffix == 'company' -%}
+          {%- assign use_white_logo = true -%}
+        {%- endif -%}
+
+        {%- if request.page_type == 'page' and template.suffix == 'science' -%}
+          {%- assign use_white_logo = true -%}
+        {%- endif -%}
+
+        {%- comment -%}
+          Assign correct logo
+          logo   = WHITE
+          logo_2 = BLACK
+        {%- endcomment -%}
+
+        {%- assign selected_logo = section.settings.logo_2 -%}
+        {%- if use_white_logo -%}
+          {%- assign selected_logo = section.settings.logo -%}
+        {%- endif -%}
+
+        {%- comment -%}
+          Fallbacks if one logo isn't set
+        {%- endcomment -%}
+        {%- if selected_logo == blank and section.settings.logo != blank -%}
+          {%- assign selected_logo = section.settings.logo -%}
+        {%- elsif selected_logo == blank and section.settings.logo_2 != blank -%}
+          {%- assign selected_logo = section.settings.logo_2 -%}
+        {%- endif -%}
+
+        {%- if selected_logo != blank -%}
+          {%- assign logo_height = section.settings.logo_width | divided_by: selected_logo.aspect_ratio -%}
+          {%- assign logo_alt = selected_logo.alt | default: shop.name | escape -%}
+          {%- assign image_size_2x = section.settings.logo_width | times: 2 -%}
+
+          {% capture srcset %}
+            {{ selected_logo | image_url: width: section.settings.logo_width }},
+            {{ selected_logo | image_url: width: image_size_2x }} 2x
+          {% endcapture %}
+
+          {{ selected_logo
+            | image_url: width: section.settings.logo_width
+            | image_tag:
+              class: 'header__heading-logo',
+              srcset: srcset,
+              height: logo_height,
+              width: section.settings.logo_width,
+              alt: logo_alt
+          }}
+        {%- endif -%}
+
+      {%- endif -%}
+
+    </a>
+  </h1>
+</div>
+
 					
                 <div class="header-top__left">                  
 						<nav class="header__menu">
