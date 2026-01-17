@@ -463,7 +463,7 @@
                                             {% endif %}                                      
 										
 											
-											{%- if section.settings.logo_2 != blank -%}
+											{% comment %} {%- if section.settings.logo_2 != blank -%}
 												{% capture srcset %}
 													{{ section.settings.logo_2 | image_url: width: section.settings.logo_width }}, {{ section.settings.logo_2 | image_url: width: image_size_2x }} 2x
 												{% endcapture %}
@@ -474,7 +474,7 @@
 													width: section.settings.logo_width,
 													alt: logo_alt
 												}}
-											{%- endif -%}
+											{%- endif -%} {% endcomment %}
 										{%- else -%}
 											<span class="h6" style="max-width:{{ section.settings.logo_width }}px">{{ shop.name }}</span>
 										{%- endif -%}
