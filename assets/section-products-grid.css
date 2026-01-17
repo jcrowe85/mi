@@ -1,40 +1,25 @@
-/* kill hardcoded inner background so panel controls color */
-.product-card { background: transparent; padding: 40px; }
+/* === FORCE per-card background to drive the hover panel === */
 
-@media(min-width:1200px){
-  .collection-product-list .collection-product-card {overflow:visible;}
+/* Ensure the LI is the positioning context */
+.products-grid-section #products-grid > li.collection-product-card {
+  position: relative;
+}
 
-  .collection-product-list li.collection-product-card {
-    position: relative; /* anchor the ::before panel */
-  }
+/* This is the colored panel that grows */
+.products-grid-section #products-grid > li.collection-product-card::before {
+  background-color: var(--card-bg, #812221) !important;
+  z-index: 0;
+}
 
-  .collection-product-list li.collection-product-card.active .product_card_product-top-details {transition: transform 0.3s;transform: translate(0, -20px);}
-  .collection-product-list li.collection-product-card.active .card-information-block {transition: transform 0.3s;transform: translate(0, 20px);}
-  .collection-product-list li.collection-product-card.active video {transform:scale(1.25);transition: transform 0.3s;}
+/* Ensure card contents sit above the panel */
+.products-grid-section #products-grid > li.collection-product-card > * {
+  position: relative;
+  z-index: 1;
+}
 
-  .collection-product-list li.collection-product-card::before  {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scaleY(0.9);
-    width: 100%;
-    height: calc(100% + 40px);
-    transform-origin: center center;
-    transition: transform 0.3s;
-
-    /* ✅ per-card Theme Editor color */
-    background-color: var(--card-bg, #812221);
-
-    border-radius: 20px;
-    z-index: 0;
-  }
-
-  .collection-product-list li.collection-product-card > * {
-    position: relative;
-    z-index: 1;
-  }
-
-  .collection-product-list li.collection-product-card.active:before {transition: transform 0.3s;transform: translate(-50%, -50%) scaleY(1);}
-  .collection-product-list { padding: 40px 0; }
+/* Remove any inner green/brown fills so you only see the panel color */
+.products-grid-section #products-grid > li.collection-product-card .product-card,
+.products-grid-section #products-grid > li.collection-product-card .card-wrapper,
+.products-grid-section #products-grid > li.collection-product-card .card {
+  background: transparent !important;
 }
