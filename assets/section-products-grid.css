@@ -2,8 +2,8 @@
   margin: 0;
 }
 
-/* ✅ Use per-card variable (falls back to your original green) */
-.product-card { background: var(--card-bg, #45663c); padding: 40px; }
+/* ✅ Mobile / <1200px: use per-card variable as the card background (fallbacks to your original green) */
+.product-card { background: var(--card-bg, #45663c); padding: 40px; border-radius: 20px; }
 
 .products-grid-section .section-header__title-item { display: flex; gap: 30px;}
 .products-grid-section .section-header__title__block { display: grid; grid-template-columns: 1fr 1fr;}
@@ -38,6 +38,9 @@ li.collection-product-card.active .button.button--primary.card__link--hover .but
   /* ✅ Ensure content sits above the growing panel */
   .collection-product-list li.collection-product-card > * { position: relative; z-index: 2; }
 
+  /* ✅ Desktop: inner card should be transparent so the growing panel is the visible background */
+  .collection-product-list li.collection-product-card .product-card { background: transparent; border-radius: 20px; }
+
   .collection-product-list li.collection-product-card.active .product_card_product-top-details {    transition: transform 0.3s;transform: translate(0, -20px);}
   .collection-product-list li.collection-product-card.active .card-information-block {  transition: transform 0.3s;  transform: translate(0, 20px);} 
   .collection-product-list li.collection-product-card.active video { transform:scale(1.25); transition: transform 0.3s;}
@@ -53,7 +56,7 @@ li.collection-product-card.active .button.button--primary.card__link--hover .but
     height: calc(100% + 40px);
     transform-origin: center center;
     transition: transform 0.3s;
-    background-color: var(--card-bg, #812221) !important;
+    background-color: var(--card-bg, #812221);
     border-radius: 20px;
     z-index: 1;
   }
