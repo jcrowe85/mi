@@ -55,7 +55,7 @@ img, video { max-width: 100%; }
     .product-card.card-wrapper h3.card__title { font-size: 16px; margin: 10px 0 20px; }
 
     /* ✅ UPDATED: use per-card CSS variable instead of hard-coded brown */
-    .product-card.card-wrapper { background: var(--card-bg, #812221); padding:50px 16px 20px 16px;border-radius: 12px;}
+    .product-card.card-wrapper { background: var(--card-bg, #812221); padding:50px 16px 20px 16px;border-radius: 20px;}
 }
 @media(max-width:749px) {
     .collection-product-list { display: flex; flex-wrap: wrap; gap: 16px 16px; }
