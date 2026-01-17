@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-.product-card { background: #45663c; padding: 40px; }
+.product-card { background: var(--card-bg, #45663c); padding: 40px; }
 .products-grid-section .section-header__title-item { display: flex; gap: 30px;}
 .products-grid-section .section-header__title__block { display: grid; grid-template-columns: 1fr 1fr;}
 .products-grid-section .button-description-wrap { display: grid; gap: 30px; grid-template-columns: 0.8fr auto; }
@@ -28,10 +28,11 @@ li.collection-product-card.active .button.button--primary.card__link--hover .but
 
 @media(min-width:1200px){
   .collection-product-list .collection-product-card {overflow:visible;}
+  .collection-product-list li.collection-product-card { position: relative; }
   .collection-product-list li.collection-product-card.active .product_card_product-top-details {    transition: transform 0.3s;transform: translate(0, -20px);}
   .collection-product-list li.collection-product-card.active .card-information-block {  transition: transform 0.3s;  transform: translate(0, 20px);} 
   .collection-product-list li.collection-product-card.active video { transform:scale(1.25); transition: transform 0.3s;}
-  .collection-product-list li.collection-product-card::before  { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scaleY(0.9); width: 100%; height: calc(100% + 40px); transform-origin: center center; transition: transform 0.3s; background-color:#812221; border-radius: 20px; }
+  .collection-product-list li.collection-product-card::before  { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scaleY(0.9); width: 100%; height: calc(100% + 40px); transform-origin: center center; transition: transform 0.3s; background-color: var(--card-bg, #812221); border-radius: 20px; z-index: -1; }
   .collection-product-list li.collection-product-card.active:before { transition: transform 0.3s;transform: translate(-50%, -50%) scaleY(1);}
   .collection-product-list { padding: 40px 0; }
 }
@@ -47,9 +48,3 @@ li.collection-product-card.active .button.button--primary.card__link--hover .but
   .products-grid-section .section-header__title__block {grid-template-columns: 1fr; align-items: end; }
   .products-grid-section .section-header__title__block a {display:none;}
 }
-
-
-
-
-
-
