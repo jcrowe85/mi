@@ -62,8 +62,6 @@
       "custom_css": [],
       "settings": {
         "height": 130,
-        "logo": "shopify://shop_images/logo_white.png",
-        "logo_2": "shopify://shop_images/logo_white.png",
         "logo_width": 90,
         "menu": "main-menu",
         "color_scheme": "",
