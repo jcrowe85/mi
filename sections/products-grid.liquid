@@ -105,11 +105,6 @@
       {% endif %}
     }
   }
-
-  /* ✅ Per-card background color via CSS variable */
-  #shopify-section-{{ section.id }} .collection-product-card {
-    background: var(--card-bg, transparent);
-  }
 {%- endstyle -%}
 
 {%- comment -%}
@@ -185,7 +180,6 @@
             {%- for block in section.blocks -%}
               {%- assign product = all_products[block.settings.product] -%}
               {%- if product -%}
-
                 <li
                   class="collection-product-card"
                   style="{% if block.settings.card_bg != blank %}--card-bg: {{ block.settings.card_bg }};{% endif %}"
@@ -587,15 +581,12 @@
           "id": "static_image",
           "label": "Static image override"
         },
-
-        /* ✅ NEW: per-card background color */
         {
           "type": "color",
           "id": "card_bg",
           "label": "Card background color",
           "default": "#ffffff"
         },
-
         {
           "type": "header",
           "content": "Hover video URLs (Desktop)"
@@ -615,7 +606,6 @@
           "id": "hover_video_mp4_desktop",
           "label": "Desktop MP4 fallback URL"
         },
-
         {
           "type": "header",
           "content": "Hover video URLs (Mobile)"
