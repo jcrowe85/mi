@@ -4,11 +4,13 @@
 .shopify-challenge__button:hover .button-icon, .button:hover .button-icon, .customer .button:hover .button-icon, button:hover .button-icon { opacity:1; width:12px; transform: translateX(4px); margin-left:5px; position: relative;}
 span.button-label { line-height: 1; }
 .shopify-challenge__button--primary, .shopify-challenge__button--secondary, .shopify-challenge__button--tertiary, .button--primary,
-.button--secondary, .button--tertiary, .customer .button--primary, .customer .button--secondary, 
+.button--secondary, .button--tertiary, .customer .button--primary, .customer .button--secondary,
 .customer .button--tertiary { font-size: 1.6rem; gap: 0; padding: 16px 24px !important; font-weight: 500;}
 
 
-.product-card.card-wrapper { background-color: #812221; }
+/* ✅ UPDATED: use per-card CSS variable instead of hard-coded brown */
+.product-card.card-wrapper { background-color: var(--card-bg, #812221); }
+
 span.product-tag { background-color: #d3fa99; }
 .floating-tags-list { position: absolute; left: 10px; top: 10px; }
 .floating-tags-list span.product-tag.tag-bestseller { background-color: #d3fa99; color: #000; }
@@ -19,7 +21,10 @@ span.product-tag { background-color: #d3fa99; }
 .product-card.card-wrapper h3.card__title {        justify-content: center; font-size: 24px; text-align: center; font-weight: 500 !important; margin: 10px 0 20px 0; }
 .product-card.card-wrapper span.card__quickview-text { padding: 0px 24px; gap:0;}
 .product-card.card-wrapper .quick-add.no-js-hidden { text-align: center;}
-.product-card.card-wrapper { background: #812221; padding: 40px; border-radius: 20px; }
+
+/* ✅ UPDATED: use per-card CSS variable instead of hard-coded brown */
+.product-card.card-wrapper { background: var(--card-bg, #812221); padding: 40px; border-radius: 20px; }
+
 .product-card.card-wrapper .button.button--primary.card__link--hover { max-width: fit-content; margin: 0 auto; font-size: 16px; display: inline-flex; min-width: fit-content; height: 50px;}
 .product-card.card-wrapper .card__quickview-text p {margin: 0; }
 .product-card.card-wrapper .price { font-size: 12px; text-align: center; justify-content: center; margin-top: 16px; color: #fcfcf7; opacity: 0.7; }
@@ -29,7 +34,7 @@ img, video { max-width: 100%; }
 .collection-product-list {gap:16px;}
 
 .fade-up-on-scroll {transition-delay: 0.2s;}
-.fade-up-on-scroll {opacity:0; transform: translateY(50px);  transition: opacity 1s ease-out, transform 0.8s ease-out; } 
+.fade-up-on-scroll {opacity:0; transform: translateY(50px);  transition: opacity 1s ease-out, transform 0.8s ease-out; }
 .fade-up-on-scroll.is-visible { opacity: 1; transform: translateY(0); }
 
 @media screen and (min-width:1200px) and (max-width:1380px) {
@@ -48,7 +53,9 @@ img, video { max-width: 100%; }
 
 @media(max-width:989px) {
     .product-card.card-wrapper h3.card__title { font-size: 16px; margin: 10px 0 20px; }
-    .product-card.card-wrapper { background: #812221; padding:50px 16px 20px 16px;border-radius: 12px;}
+
+    /* ✅ UPDATED: use per-card CSS variable instead of hard-coded brown */
+    .product-card.card-wrapper { background: var(--card-bg, #812221); padding:50px 16px 20px 16px;border-radius: 12px;}
 }
 @media(max-width:749px) {
     .collection-product-list { display: flex; flex-wrap: wrap; gap: 16px 16px; }
