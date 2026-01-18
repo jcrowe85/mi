@@ -637,6 +637,7 @@
 }
 
 /* On hover OR when card is active: show video/second image, hide first image */
+/* Only hide first image if there's hover media to show */
 .collection-product-card:hover .product-card__hover-video,
 .collection-product-card.active .product-card__hover-video,
 .collection-product-card:hover .media--second,
@@ -644,7 +645,7 @@
   opacity: 1;
 }
 
-.collection-product-card:hover .media--first,
-.collection-product-card.active .media--first {
+.collection-product-card:hover .media--hover-effect .media--first,
+.collection-product-card.active .media--hover-effect .media--first {
   opacity: 0;
 }
