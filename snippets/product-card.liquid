@@ -9,7 +9,6 @@
     - section_id: {String} The ID of the section that contains this card.
     - show_sku: {Boolean} Show sku. Default: false
     - custom_static_image: {Image} Static/primary image override (e.g. hero)
-    - enable_hover: {Boolean} Enable/disable hover effect. Default: true
     - hover_video: {Video} Shopify-hosted video (from `video` setting) used as hover media
     - hover_video_hevc: {String} URL to HEVC (H.265) alpha video (e.g. Cloudinary) for Safari
     - hover_video_webm: {String} URL to WebM (VP9 + alpha) video for Chrome/Firefox
@@ -108,16 +107,8 @@
     assign main_is_custom = true
   endif
 
-  # Default hover_enabled to true if not set (for backwards compatibility)
-  assign hover_enabled = true
-  if enable_hover == false
-    assign hover_enabled = false
-  endif
-
-  if hover_enabled
-    if product_card_product.media[1] != null and show_secondary_image
-      assign hover_image = product_card_product.media[1]
-    endif
+  if product_card_product.media[1] != null and show_secondary_image
+    assign hover_image = product_card_product.media[1]
   endif
 
   assign hevc_url = hover_video_hevc
@@ -125,10 +116,8 @@
   assign fallback_url = hover_video_fallback
 
   assign has_hover_video = false
-  if hover_enabled
-    if hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video
-      assign has_hover_video = true
-    endif
+  if hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video
+    assign has_hover_video = true
   endif
 %}
 
@@ -189,7 +178,7 @@
   <div class="card card--product" tabindex="-1">
     <a
       href="{{ product_card_product.url | default: '#' }}"
-      class="media{% if hover_enabled %} media--hover-effect{% endif %} js-color-swatches-link"
+      class="media media--hover-effect js-color-swatches-link"
       aria-label="{{ "accessibility.product_link" | t }}"
       style="padding-bottom: {{ image_size }};"
       {% if has_hover_video %}data-mobile-video="true"{% endif %}
@@ -220,12 +209,12 @@
         }}
 
         {%- comment -%}
-          Hover media priority (only shown if enable_hover is true):
+          Hover media priority:
           1) External alpha video (Cloudinary/etc via URLs)
           2) Shopify video object (hover_video)
           3) Secondary image
         {%- endcomment -%}
-        {% if hover_enabled and (hevc_url != blank or webm_url != blank or fallback_url != blank) %}
+        {% if hevc_url != blank or webm_url != blank or fallback_url != blank %}
           <video
             class="product-card__hover-video motion-reduce media--second"
             playsinline
@@ -244,7 +233,7 @@
               <source src="{{ fallback_url }}" type="video/mp4">
             {% endif %}
           </video>
-        {% elsif hover_enabled and hover_video %}
+        {% elsif hover_video %}
           {{ hover_video
             | video_tag:
               class: 'product-card__hover-video motion-reduce media--second',
@@ -253,7 +242,7 @@
               playsinline: true,
               autoplay: true
           }}
-        {% elsif hover_enabled and hover_image %}
+        {% elsif hover_image %}
           {%- capture style_hover -%}
             object-position: {{ hover_image.presentation.focal_point }};
             object-fit: {{ imgae_fit }};
