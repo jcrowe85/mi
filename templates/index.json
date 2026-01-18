@@ -80,7 +80,8 @@
           "type": "product",
           "settings": {
             "product": "bloom-peptide-hair-serum-3-bottle",
-            "image_width": 100,
+            "static_image": "shopify://shop_images/wrinkles_and_lines_1.png",
+            "image_width": 65,
             "card_bg": "#cbaeeb",
             "button_bg": "#532d9d",
             "button_text": "#000000",
@@ -98,7 +99,8 @@
           "type": "product",
           "settings": {
             "product": "micro-roller",
-            "image_width": 100,
+            "static_image": "shopify://shop_images/glow_and_texture_1.png",
+            "image_width": 65,
             "card_bg": "#fd8ca5",
             "button_bg": "#f33d40",
             "button_text": "#000000",
