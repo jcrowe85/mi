@@ -213,6 +213,7 @@
                     add_id: forloop.index,
                     show_sku: section.settings.show_sku,
                     custom_static_image: block.settings.static_image,
+                    custom_hover_image: block.settings.hover_image,
 
                     /*
                       Keep backwards compatibility in case your snippet still expects these names.
@@ -586,6 +587,11 @@
           "type": "image_picker",
           "id": "static_image",
           "label": "Static image override"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Hover image (shown if no video links provided)"
         },
         {
           "type": "color",

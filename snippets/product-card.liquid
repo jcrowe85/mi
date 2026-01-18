@@ -9,6 +9,7 @@
     - section_id: {String} The ID of the section that contains this card.
     - show_sku: {Boolean} Show sku. Default: false
     - custom_static_image: {Image} Static/primary image override (e.g. hero)
+    - custom_hover_image: {Image} Custom hover image (shown if no video links provided)
     - hover_video: {Video} Shopify-hosted video (from `video` setting) used as hover media
     - hover_video_hevc: {String} URL to HEVC (H.265) alpha video (e.g. Cloudinary) for Safari
     - hover_video_webm: {String} URL to WebM (VP9 + alpha) video for Chrome/Firefox
@@ -92,9 +93,10 @@
   - main_image:
     - default: product_card_product.featured_media
     - override: custom_static_image if provided
-  - hover:
+  - hover (priority order):
     - if hover_video_*(url) present -> use external video with <source> tags
     - else if hover_video (Shopify video object) present -> use that
+    - else if custom_hover_image provided -> use that image
     - else if show_secondary_image and product has 2nd media -> use that image
 {%- endcomment -%}
 {% liquid
@@ -107,10 +109,6 @@
     assign main_is_custom = true
   endif
 
-  if product_card_product.media[1] != null and show_secondary_image
-    assign hover_image = product_card_product.media[1]
-  endif
-
   assign hevc_url = hover_video_hevc
   assign webm_url = hover_video_webm
   assign fallback_url = hover_video_fallback
@@ -118,6 +116,15 @@
   assign has_hover_video = false
   if hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video
     assign has_hover_video = true
+  endif
+
+  # Only use hover image if no video is available (priority: custom_hover_image > secondary image)
+  if has_hover_video == false
+    if custom_hover_image != blank
+      assign hover_image = custom_hover_image
+    elsif product_card_product.media[1] != null and show_secondary_image
+      assign hover_image = product_card_product.media[1]
+    endif
   endif
 %}
 
