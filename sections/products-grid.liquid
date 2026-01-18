@@ -182,14 +182,7 @@
               {%- if product -%}
                 <li
                   class="collection-product-card"
-                  style="
-                    {% if block.settings.card_bg != blank %}--card-bg: {{ block.settings.card_bg }};{% endif %}
-                    {% if block.settings.button_bg != blank %}--button-bg: {{ block.settings.button_bg }};{% endif %}
-                    {% if block.settings.button_text != blank %}--button-text: {{ block.settings.button_text }};{% endif %}
-                    {% if block.settings.button_bg_hover != blank %}--button-bg-hover: {{ block.settings.button_bg_hover }};{% endif %}
-                    {% if block.settings.button_text_hover != blank %}--button-text-hover: {{ block.settings.button_text_hover }};{% endif %}
-                    {% if block.settings.image_width != blank %}--image-width: {{ block.settings.image_width }}%;{% endif %}
-                  "
+                  style="{% if block.settings.card_bg != blank %}--card-bg: {{ block.settings.card_bg }};{% endif %}"
                   {{ block.shopify_attributes }}
                   data-hevc-desktop="{{ block.settings.hover_video_hevc_desktop | escape }}"
                   data-hevc-mobile="{{ block.settings.hover_video_hevc_mobile | escape }}"
@@ -214,8 +207,6 @@
                     add_id: forloop.index,
                     show_sku: section.settings.show_sku,
                     custom_static_image: block.settings.static_image,
-                    custom_hover_image: block.settings.hover_image,
-                    enable_hover_video: block.settings.enable_hover_video,
 
                     /*
                       Keep backwards compatibility in case your snippet still expects these names.
@@ -591,65 +582,10 @@
           "label": "Static image override"
         },
         {
-          "type": "image_picker",
-          "id": "hover_image",
-          "label": "Hover image (shown if no video links provided)"
-        },
-        {
-          "type": "range",
-          "id": "image_width",
-          "min": 50,
-          "max": 100,
-          "step": 5,
-          "unit": "%",
-          "default": 100,
-          "label": "Image width",
-          "info": "Width of the product image within the card (50-100%)"
-        },
-        {
           "type": "color",
           "id": "card_bg",
           "label": "Card background color",
           "default": "#ffffff"
-        },
-        {
-          "type": "header",
-          "content": "Shop Now Button Colors (Per Card)"
-        },
-        {
-          "type": "color",
-          "id": "button_bg",
-          "label": "Button background color",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_text",
-          "label": "Button text color",
-          "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "button_bg_hover",
-          "label": "Button hover background (optional)",
-          "default": "#ffffff"
-        },
-        {
-          "type": "color",
-          "id": "button_text_hover",
-          "label": "Button hover text (optional)",
-          "default": "#000000"
-        },
-        {
-          "type": "header",
-          "content": "Hover Video"
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_hover_video",
-          "label": "Enable hover video",
-          "default": true,
-          "info": "When enabled, video will show on hover. When disabled, static image remains visible."
         },
         {
           "type": "header",
