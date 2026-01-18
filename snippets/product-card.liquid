@@ -109,8 +109,9 @@
   endif
 
   # Default hover_enabled to true if not set (for backwards compatibility)
+  # Only disable hover if enable_hover is explicitly false
   assign hover_enabled = true
-  if enable_hover == false
+  if enable_hover != blank and enable_hover == false
     assign hover_enabled = false
   endif
 
