@@ -213,6 +213,7 @@
                     add_id: forloop.index,
                     show_sku: section.settings.show_sku,
                     custom_static_image: block.settings.static_image,
+                    custom_image_width: block.settings.image_width,
 
                     /*
                       Keep backwards compatibility in case your snippet still expects these names.
@@ -586,6 +587,16 @@
           "type": "image_picker",
           "id": "static_image",
           "label": "Static image override"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "label": "Image width",
+          "min": 50,
+          "max": 150,
+          "step": 5,
+          "unit": "%",
+          "default": 100
         },
         {
           "type": "color",
