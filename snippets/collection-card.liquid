@@ -31,13 +31,14 @@
 
   /* ✅ CTA button colors driven by per-card CSS vars from the LI */
   .collection-card .collection-card__cta.button {
-    background: var(--cta-bg, rgba(var(--color-button, 0,0,0), 1));
-    color: var(--cta-text, rgba(var(--color-button-text, 255,255,255), 1));
+    background-color: var(--cta-bg, {% if cta_bg != blank %}{{ cta_bg }}{% else %}rgba(var(--color-button, 0,0,0), 1){% endif %}) !important;
+    color: var(--cta-text, {% if cta_text != blank %}{{ cta_text }}{% else %}rgba(var(--color-button-text, 255,255,255), 1){% endif %}) !important;
     border-color: transparent;
   }
-  .collection-card .collection-card__cta.button:hover {
-    background: var(--cta-bg-hover, var(--cta-bg, rgba(var(--color-button, 0,0,0), 1)));
-    color: var(--cta-text-hover, var(--cta-text, rgba(var(--color-button-text, 255,255,255), 1)));
+  .collection-card .collection-card__cta.button:hover,
+  .collection-card .collection-card__cta.button:focus {
+    background-color: var(--cta-bg-hover, {% if cta_bg_hover != blank %}{{ cta_bg_hover }}{% else %}var(--cta-bg, {% if cta_bg != blank %}{{ cta_bg }}{% else %}rgba(var(--color-button, 0,0,0), 1){% endif %}){% endif %}) !important;
+    color: var(--cta-text-hover, {% if cta_text_hover != blank %}{{ cta_text_hover }}{% else %}var(--cta-text, {% if cta_text != blank %}{{ cta_text }}{% else %}rgba(var(--color-button-text, 255,255,255), 1){% endif %}){% endif %}) !important;
   }
 {% endstyle %}
 
