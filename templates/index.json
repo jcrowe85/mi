@@ -114,12 +114,11 @@
         },
         "product_p8bzne": {
           "type": "product",
-          "disabled": true,
           "settings": {
-            "product": "detangling-comb",
+            "product": "bloom-hair-scalp-serum-longform",
             "image_width": 100,
             "card_bg": "#ffffff",
-            "button_bg": "#ffffff",
+            "button_bg": "#343334",
             "button_text": "#000000",
             "button_bg_hover": "#ffffff",
             "button_text_hover": "#000000",
