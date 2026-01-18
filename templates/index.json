@@ -118,6 +118,7 @@
           "type": "product",
           "settings": {
             "product": "bloom-hair-scalp-serum-longform",
+            "static_image": "shopify://shop_images/firmness_and_resilience.png",
             "image_width": 100,
             "card_bg": "#ffffff",
             "button_bg": "#343334",
