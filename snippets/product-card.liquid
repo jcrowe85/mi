@@ -114,13 +114,14 @@
   assign webm_url = hover_video_webm
   assign fallback_url = hover_video_fallback
 
-  # Default enable_hover_video to true if not set (for backwards compatibility)
-  if enable_hover_video == blank
-    assign enable_hover_video = true
+  # Check if hover video should be enabled (default to true if not set for backwards compatibility)
+  assign hover_video_enabled = true
+  if enable_hover_video == false
+    assign hover_video_enabled = false
   endif
 
   assign has_hover_video = false
-  if enable_hover_video and (hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video)
+  if hover_video_enabled and (hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video)
     assign has_hover_video = true
   endif
 
