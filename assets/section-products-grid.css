@@ -17,6 +17,12 @@
   color: var(--button-text-hover, var(--button-text, rgba(var(--color-button-text, 255,255,255), 1))) !important;
 }
 
+/* ✅ Image width - per card customization */
+.collection-product-card .product-card .media {
+  max-width: var(--image-width, 100%);
+  margin: 0 auto;
+}
+
 .products-grid-section .section-header__title-item { display: flex; gap: 30px;}
 .products-grid-section .section-header__title__block { display: grid; grid-template-columns: 1fr 1fr;}
 .products-grid-section .button-description-wrap { display: grid; gap: 30px; grid-template-columns: 0.8fr auto; }

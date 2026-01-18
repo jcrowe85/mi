@@ -188,6 +188,7 @@
                     {% if block.settings.button_text != blank %}--button-text: {{ block.settings.button_text }};{% endif %}
                     {% if block.settings.button_bg_hover != blank %}--button-bg-hover: {{ block.settings.button_bg_hover }};{% endif %}
                     {% if block.settings.button_text_hover != blank %}--button-text-hover: {{ block.settings.button_text_hover }};{% endif %}
+                    {% if block.settings.image_width != blank %}--image-width: {{ block.settings.image_width }}%;{% endif %}
                   "
                   {{ block.shopify_attributes }}
                   data-hevc-desktop="{{ block.settings.hover_video_hevc_desktop | escape }}"
@@ -592,6 +593,17 @@
           "type": "image_picker",
           "id": "hover_image",
           "label": "Hover image (shown if no video links provided)"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "default": 100,
+          "label": "Image width",
+          "info": "Width of the product image within the card (50-100%)"
         },
         {
           "type": "color",
