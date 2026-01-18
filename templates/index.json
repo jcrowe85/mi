@@ -96,7 +96,7 @@
           "settings": {
             "product": "micro-roller",
             "card_bg": "#fd8ca5",
-            "button_bg": "#ffffff",
+            "button_bg": "#f33d40",
             "button_text": "#000000",
             "button_bg_hover": "#ffffff",
             "button_text_hover": "#000000",
