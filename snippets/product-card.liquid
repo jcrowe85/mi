@@ -183,13 +183,13 @@
         {%- if main_is_custom -%}
           {%- capture style_primary -%}
             object-fit: {{ imgae_fit }};
-            {% if custom_image_width != blank %}width: {{ custom_image_width }}%;{% endif %}
+            {% if custom_image_width != blank %}width: {{ custom_image_width }}%; margin-left: auto; margin-right: auto;{% endif %}
           {%- endcapture -%}
         {%- else -%}
           {%- capture style_primary -%}
             object-position: {{ main_image.presentation.focal_point }};
             object-fit: {{ imgae_fit }};
-            {% if custom_image_width != blank %}width: {{ custom_image_width }}%;{% endif %}
+            {% if custom_image_width != blank %}width: {{ custom_image_width }}%; margin-left: auto; margin-right: auto;{% endif %}
           {%- endcapture -%}
         {%- endif -%}
 
