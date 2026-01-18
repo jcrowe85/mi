@@ -213,6 +213,7 @@
                     add_id: forloop.index,
                     show_sku: section.settings.show_sku,
                     custom_static_image: block.settings.static_image,
+                    enable_hover: block.settings.enable_hover,
 
                     /*
                       Keep backwards compatibility in case your snippet still expects these names.
@@ -620,6 +621,17 @@
           "id": "button_text_hover",
           "label": "Button hover text (optional)",
           "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Hover Effect"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_hover",
+          "label": "Enable hover effect",
+          "default": true,
+          "info": "When enabled, shows video or second image on hover. When disabled, static image remains visible."
         },
         {
           "type": "header",
