@@ -108,12 +108,13 @@
     assign main_is_custom = true
   endif
 
-  # Default enable_hover to true if not set (for backwards compatibility)
-  if enable_hover == blank
-    assign enable_hover = true
+  # Default hover_enabled to true if not set (for backwards compatibility)
+  assign hover_enabled = true
+  if enable_hover == false
+    assign hover_enabled = false
   endif
 
-  if enable_hover and product_card_product.media[1] != null and show_secondary_image
+  if hover_enabled and product_card_product.media[1] != null and show_secondary_image
     assign hover_image = product_card_product.media[1]
   endif
 
@@ -122,7 +123,7 @@
   assign fallback_url = hover_video_fallback
 
   assign has_hover_video = false
-  if enable_hover and (hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video)
+  if hover_enabled and (hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video)
     assign has_hover_video = true
   endif
 %}
@@ -184,7 +185,7 @@
   <div class="card card--product" tabindex="-1">
     <a
       href="{{ product_card_product.url | default: '#' }}"
-      class="media{% if enable_hover %} media--hover-effect{% endif %} js-color-swatches-link"
+      class="media{% if hover_enabled %} media--hover-effect{% endif %} js-color-swatches-link"
       aria-label="{{ "accessibility.product_link" | t }}"
       style="padding-bottom: {{ image_size }};"
       {% if has_hover_video %}data-mobile-video="true"{% endif %}
@@ -220,7 +221,7 @@
           2) Shopify video object (hover_video)
           3) Secondary image
         {%- endcomment -%}
-        {% if enable_hover and (hevc_url != blank or webm_url != blank or fallback_url != blank) %}
+        {% if hover_enabled and (hevc_url != blank or webm_url != blank or fallback_url != blank) %}
           <video
             class="product-card__hover-video motion-reduce media--second"
             playsinline
@@ -239,7 +240,7 @@
               <source src="{{ fallback_url }}" type="video/mp4">
             {% endif %}
           </video>
-        {% elsif enable_hover and hover_video %}
+        {% elsif hover_enabled and hover_video %}
           {{ hover_video
             | video_tag:
               class: 'product-card__hover-video motion-reduce media--second',
@@ -248,7 +249,7 @@
               playsinline: true,
               autoplay: true
           }}
-        {% elsif enable_hover and hover_image %}
+        {% elsif hover_enabled and hover_image %}
           {%- capture style_hover -%}
             object-position: {{ hover_image.presentation.focal_point }};
             object-fit: {{ imgae_fit }};
