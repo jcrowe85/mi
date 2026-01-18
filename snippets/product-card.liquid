@@ -10,6 +10,7 @@
     - show_sku: {Boolean} Show sku. Default: false
     - custom_static_image: {Image} Static/primary image override (e.g. hero)
     - custom_hover_image: {Image} Custom hover image (shown if no video links provided)
+    - enable_hover_video: {Boolean} Enable/disable hover video effect. Default: true
     - hover_video: {Video} Shopify-hosted video (from `video` setting) used as hover media
     - hover_video_hevc: {String} URL to HEVC (H.265) alpha video (e.g. Cloudinary) for Safari
     - hover_video_webm: {String} URL to WebM (VP9 + alpha) video for Chrome/Firefox
@@ -114,7 +115,7 @@
   assign fallback_url = hover_video_fallback
 
   assign has_hover_video = false
-  if hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video
+  if enable_hover_video != false and (hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video)
     assign has_hover_video = true
   endif
 
@@ -185,7 +186,7 @@
   <div class="card card--product" tabindex="-1">
     <a
       href="{{ product_card_product.url | default: '#' }}"
-      class="media media--hover-effect js-color-swatches-link"
+      class="media{% if has_hover_video %} media--hover-effect{% endif %} js-color-swatches-link"
       aria-label="{{ "accessibility.product_link" | t }}"
       style="padding-bottom: {{ image_size }};"
       {% if has_hover_video %}data-mobile-video="true"{% endif %}
@@ -216,12 +217,12 @@
         }}
 
         {%- comment -%}
-          Hover media priority:
+          Hover media priority (only shown if enable_hover_video is true):
           1) External alpha video (Cloudinary/etc via URLs)
           2) Shopify video object (hover_video)
           3) Secondary image
         {%- endcomment -%}
-        {% if hevc_url != blank or webm_url != blank or fallback_url != blank %}
+        {% if has_hover_video and (hevc_url != blank or webm_url != blank or fallback_url != blank) %}
           <video
             class="product-card__hover-video motion-reduce media--second"
             playsinline
@@ -240,7 +241,7 @@
               <source src="{{ fallback_url }}" type="video/mp4">
             {% endif %}
           </video>
-        {% elsif hover_video %}
+        {% elsif has_hover_video and hover_video %}
           {{ hover_video
             | video_tag:
               class: 'product-card__hover-video motion-reduce media--second',
