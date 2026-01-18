@@ -62,6 +62,10 @@
           "settings": {
             "product": "bloom-hair-scalp-serum-longform",
             "card_bg": "#93c0f0",
+            "button_bg": "#3a43c2",
+            "button_text": "#000000",
+            "button_bg_hover": "#5e67e3",
+            "button_text_hover": "#000000",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -75,6 +79,10 @@
           "settings": {
             "product": "bloom-peptide-hair-serum-3-bottle",
             "card_bg": "#cbaeeb",
+            "button_bg": "#ffffff",
+            "button_text": "#000000",
+            "button_bg_hover": "#ffffff",
+            "button_text_hover": "#000000",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -88,6 +96,10 @@
           "settings": {
             "product": "micro-roller",
             "card_bg": "#fd8ca5",
+            "button_bg": "#ffffff",
+            "button_text": "#000000",
+            "button_bg_hover": "#ffffff",
+            "button_text_hover": "#000000",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
@@ -102,6 +114,10 @@
           "settings": {
             "product": "detangling-comb",
             "card_bg": "#ffffff",
+            "button_bg": "#ffffff",
+            "button_text": "#000000",
+            "button_bg_hover": "#ffffff",
+            "button_text_hover": "#000000",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
