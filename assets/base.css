@@ -1604,6 +1604,16 @@ details > * {
   opacity: 0;
 }
 
+/* Show second image on hover */
+@media (hover: hover) {
+  .media.media--hover-effect:hover > img + img {
+    opacity: 1;
+  }
+  .media.media--hover-effect:hover > img:first-child {
+    opacity: 0;
+  }
+}
+
 @media screen and (min-width: 990px) {
   .media--cropped {
     padding-bottom: 63%;
