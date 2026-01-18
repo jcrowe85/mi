@@ -79,9 +79,9 @@
           "settings": {
             "product": "bloom-peptide-hair-serum-3-bottle",
             "card_bg": "#cbaeeb",
-            "button_bg": "#ffffff",
+            "button_bg": "#532d9d",
             "button_text": "#000000",
-            "button_bg_hover": "#ffffff",
+            "button_bg_hover": "#8b5fe0",
             "button_text_hover": "#000000",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
