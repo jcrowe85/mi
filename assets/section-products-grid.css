@@ -5,6 +5,18 @@
 /* ✅ Mobile / <1200px: this is fine, but keep it from fighting .product-card.card-wrapper in custom.css */
 .product-card { background: var(--card-bg, #45663c); padding: 40px; border-radius: 20px; }
 
+/* ✅ Shop Now button colors - per card customization */
+.collection-product-card .card__link.button {
+  background-color: var(--button-bg, rgba(var(--color-button, 0,0,0), 1)) !important;
+  color: var(--button-text, rgba(var(--color-button-text, 255,255,255), 1)) !important;
+  border-color: transparent;
+}
+.collection-product-card .card__link.button:hover,
+.collection-product-card .card__link.button:focus {
+  background-color: var(--button-bg-hover, var(--button-bg, rgba(var(--color-button, 0,0,0), 1))) !important;
+  color: var(--button-text-hover, var(--button-text, rgba(var(--color-button-text, 255,255,255), 1))) !important;
+}
+
 .products-grid-section .section-header__title-item { display: flex; gap: 30px;}
 .products-grid-section .section-header__title__block { display: grid; grid-template-columns: 1fr 1fr;}
 .products-grid-section .button-description-wrap { display: grid; gap: 30px; grid-template-columns: 0.8fr auto; }
