@@ -62,6 +62,7 @@
           "settings": {
             "product": "bloom-hair-scalp-serum-longform",
             "static_image": "shopify://shop_images/ghk-cu_1.png",
+            "image_width": 85,
             "card_bg": "#93c0f0",
             "button_bg": "#3a43c2",
             "button_text": "#000000",
@@ -79,6 +80,7 @@
           "type": "product",
           "settings": {
             "product": "bloom-peptide-hair-serum-3-bottle",
+            "image_width": 100,
             "card_bg": "#cbaeeb",
             "button_bg": "#532d9d",
             "button_text": "#000000",
@@ -96,6 +98,7 @@
           "type": "product",
           "settings": {
             "product": "micro-roller",
+            "image_width": 100,
             "card_bg": "#fd8ca5",
             "button_bg": "#f33d40",
             "button_text": "#000000",
@@ -114,6 +117,7 @@
           "disabled": true,
           "settings": {
             "product": "detangling-comb",
+            "image_width": 100,
             "card_bg": "#ffffff",
             "button_bg": "#ffffff",
             "button_text": "#000000",
@@ -223,7 +227,7 @@
         "body_text": "<p>Subscribe to keep your scalp in a steady growth rhythm with peptides + six actives working day after day.*</p>",
         "button_text": "subscribe & save—35%",
         "button_link": "shopify://products/bloom-hair-scalp-serum-longform",
-        "button_bg_color": "#3b0c00",
+        "button_bg_color": "#343334",
         "button_text_color": "#ffffff",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent",
