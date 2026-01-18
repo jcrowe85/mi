@@ -628,16 +628,19 @@
   opacity: 1;
 }
 
-.collection-product-card .product-card__hover-video {
+.collection-product-card .product-card__hover-video,
+.collection-product-card .media--second {
   position: absolute;
   inset: 0;
   opacity: 0;
-  pointer-events: none; /* video doesn't block hover/click */
+  pointer-events: none; /* video/image doesn't block hover/click */
 }
 
-/* On hover OR when card is active: show video, hide image */
+/* On hover OR when card is active: show video/second image, hide first image */
 .collection-product-card:hover .product-card__hover-video,
-.collection-product-card.active .product-card__hover-video {
+.collection-product-card.active .product-card__hover-video,
+.collection-product-card:hover .media--second,
+.collection-product-card.active .media--second {
   opacity: 1;
 }
 

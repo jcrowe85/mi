@@ -119,6 +119,14 @@
   if hevc_url != blank or webm_url != blank or fallback_url != blank or hover_video
     assign has_hover_video = true
   endif
+
+  # Only enable hover effect if enable_hover is not false AND there's hover media to show
+  assign show_hover_effect = false
+  if enable_hover != false
+    if has_hover_video or hover_image != blank
+      assign show_hover_effect = true
+    endif
+  endif
 %}
 
 <div
@@ -178,7 +186,7 @@
   <div class="card card--product" tabindex="-1">
     <a
       href="{{ product_card_product.url | default: '#' }}"
-      class="media{% unless enable_hover == false %} media--hover-effect{% endunless %} js-color-swatches-link"
+      class="media{% if show_hover_effect %} media--hover-effect{% endif %} js-color-swatches-link"
       aria-label="{{ "accessibility.product_link" | t }}"
       style="padding-bottom: {{ image_size }};"
       {% if has_hover_video %}data-mobile-video="true"{% endif %}
