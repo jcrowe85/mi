@@ -231,6 +231,7 @@
         "button_link": "shopify://products/bloom-hair-scalp-serum-longform",
         "button_bg_color": "#343334",
         "button_text_color": "#ffffff",
+        "main_product_image": "shopify://shop_images/section_3_image_1.png",
         "margin_top": "no-indent",
         "margin_bottom": "no-indent",
         "padding_top": "m",
