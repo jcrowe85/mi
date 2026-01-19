@@ -271,7 +271,7 @@
       "type": "image-text-second",
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-fb0cb3b5-6ef7-436e-8c34-2c4164286d5a",
         "video": "shopify://files/videos/peptide skin penetration.mp4",
         "image_size": "adapt",
         "layout": "text_first",
