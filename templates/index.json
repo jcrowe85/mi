@@ -271,6 +271,7 @@
       "name": "t:sections.image-with-text.presets.name",
       "settings": {
         "color_scheme": "",
+        "video": "shopify://files/videos/Recording 2026-01-18 212725.mp4",
         "image_size": "adapt",
         "layout": "text_first",
         "icon_size": "medium",
