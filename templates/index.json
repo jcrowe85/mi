@@ -17,8 +17,8 @@
           "settings": {
             "image": "shopify://shop_images/mid_2.png",
             "color_scheme": "background-3",
-            "caption": "",
-            "bg_color": "#812221",
+            "caption": "K Beauty",
+            "bg_color": "rgba(0,0,0,0)",
             "text_color": "#ffffff",
             "heading": "Peptide Jelly Face Creams for Better Skin",
             "text": "<p>Advanced peptide delivery formulated by Korean cosmetic science for visible skin renewal.<br/></p>",
