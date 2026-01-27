@@ -175,7 +175,11 @@
 	}
 	</style>
 	<span class="caption caption-{{ block.id }} {% if text_animation and parallax == false %} slide-up-animated{% endif %}"
-	{% if text_animation == false %}data-swiper-parallax="-600"{% endif %} >{{ block.settings.caption }}</span>
+	{% if text_animation == false %}data-swiper-parallax="-600"{% endif %}>
+		{% if text_animation %}<div class="slide-up-item">{% endif %}
+			{{ block.settings.caption }}
+		{% if text_animation %}</div>{% endif %}
+	</span>
 {% endif %}
 								{% if block.settings.heading != blank %}
 									<h1
