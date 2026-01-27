@@ -106,7 +106,7 @@
             "button_bg": "#f33d40",
             "button_text": "#000000",
             "button_bg_hover": "#ffffff",
-            "button_text_hover": "#000000",
+            "button_text_hover": "#f72e32",
             "hover_video_hevc_desktop": "",
             "hover_video_webm_desktop": "",
             "hover_video_mp4_desktop": "",
