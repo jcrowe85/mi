@@ -164,12 +164,14 @@
 	{%- liquid
 	assign bg_color = block.settings.bg_color | default: "#dc2626"
 	assign text_color = block.settings.text_color | default: "#ffffff"
+	assign font_size = block.settings.caption_font_size | default: 12
 	-%}
 
 	<style>
 	.caption-{{ block.id }} {
 		background-color: {{ bg_color }};
 		color: {{ text_color }};
+		font-size: {{ font_size }}px;
 	}
 	</style>
 	<span class="caption caption-{{ block.id }} {% if text_animation and parallax == false %} slide-up-animated{% endif %}"
@@ -533,6 +535,16 @@
 						"type":"color",
 						"id":"text_color",
 						"label":"Caption Text Color"
+					},
+					{
+						"type": "range",
+						"id": "caption_font_size",
+						"min": 8,
+						"max": 48,
+						"step": 1,
+						"default": 12,
+						"unit": "px",
+						"label": "Caption Font Size"
 					},
 					{
 						"type": "inline_richtext",
