@@ -168,10 +168,10 @@
 	-%}
 
 	<style>
-	.caption-{{ block.id }} {
+	.slideshow span.caption.caption-{{ block.id }} {
 		background-color: {{ bg_color }};
 		color: {{ text_color }};
-		font-size: {{ font_size }}px;
+		font-size: {{ font_size }}px !important;
 	}
 	</style>
 	<span class="caption caption-{{ block.id }} {% if text_animation and parallax == false %} slide-up-animated{% endif %}"
